@@ -4,6 +4,9 @@ import './globals.css';
 import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 
+import { NAV_ITEMS } from '@/constants';
+import AcBtn from '@/components/utils/AcBtn';
+
 export const metadata: Metadata = {
   title:
     'Tamer Digital -- Seriously focus on building the Business of your dreams',
@@ -20,7 +23,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className='antialiased'>
         <main>
-          <NavBar />
+          <NavBar logo='TamerDigital' navItems={NAV_ITEMS}  />
 
           {children}
           <Footer />
