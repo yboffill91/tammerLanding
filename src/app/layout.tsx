@@ -5,7 +5,6 @@ import NavBar from '@/components/NavBar';
 import Footer from '@/components/Footer';
 
 import { NAV_ITEMS } from '@/constants';
-import AcBtn from '@/components/utils/AcBtn';
 
 export const metadata: Metadata = {
   title:
@@ -21,9 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className='antialiased'>
-        <main>
-          <NavBar logo='TamerDigital' navItems={NAV_ITEMS}  />
+      <body className='antialiased scroll-smooth overflow-x-hidden'>
+        <main className='margin-auto'>
+          <NavBar logo='TamerDigital' navItems={NAV_ITEMS} />
 
           {children}
           <Footer />

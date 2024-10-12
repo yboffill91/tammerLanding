@@ -1,33 +1,49 @@
-export const NAV_ITEMS = [
+import { IconType } from 'react-icons';
+import {
+  RiInformationLine,
+  RiToolsLine,
+  RiFileTextLine,
+  RiServiceLine,
+  RiHomeLine,
+} from 'react-icons/ri';
+
+export interface NavItem {
+  id: number;
+  text: string;
+  icon: IconType;
+  url: string;
+}
+
+export const NAV_ITEMS: NavItem[] = [
   {
     id: 1,
     text: 'Home',
     url: '/',
-    icon: 'RiHomeLine',
+    icon: RiHomeLine,
   },
   {
     id: 2,
     text: 'About us',
     url: '/about-us',
-    icon: 'RiHomeLine',
+    icon: RiInformationLine,
   },
   {
     id: 3,
     text: 'Free Tools',
     url: '/free-tools',
-    icon: 'RiHomeLine',
+    icon: RiToolsLine,
   },
   {
     id: 4,
     text: 'Blog',
     url: '/blog',
-    icon: 'RiHomeLine',
+    icon: RiFileTextLine,
   },
   {
     id: 5,
     text: 'Services',
     url: '/services',
-    icon: 'RiHomeLine',
+    icon: RiServiceLine,
   },
 ];
 
@@ -56,61 +72,91 @@ export const SOCIAL_MEDIA = [
   },
 ];
 
-export const FEATURES = [{
+export const FEATURES = [
+  {
     id: 1,
     text: 'Certified Team',
-    icon: ''
-},{
+    icon: '',
+  },
+  {
     id: 3,
     text: 'Reliability',
-    icon: ''
-},{
+    icon: '',
+  },
+  {
     id: 4,
     text: 'Expertise',
-    icon: ''
-},{
+    icon: '',
+  },
+  {
     id: 5,
     text: 'Top Quality',
-    icon: ''
-},{
+    icon: '',
+  },
+  {
     id: 6,
     text: 'Assured Growth',
-    icon: ''
-},{
+    icon: '',
+  },
+  {
     id: 7,
     text: 'Cloud Services',
-    icon: ''
-},{
+    icon: '',
+  },
+  {
     id: 8,
     text: 'Code Support',
-    icon: ''
-}]
+    icon: '',
+  },
+];
 
-export const BENTO_GRID = [{
-    id: 1,
-    head: 'Monthy Visitors',
-    text: '',
-    icon: ''
-},{
-    id: 3,
-    head: 'Daily Clients',
-    text: 'Effective marketing ensures that your buss=iness acquires multiples customers daily. We increase your visibility in the digital world, using marketing strategies that continually attract and retain new customers',
-    icon: ''
-}, {
-    id: 4,
-    head: 'Profit Increase',
-    text: 'A well-designed website channels all digital traffic, increasing potential customer visit and turning them into loyal consumers of a product or services provided and displayed on the website',
-    icon: ''
-}, {
-    id: 5,
-    head: 'High reputation',
-    text: 'A strong digital presence inproves the reputation and authority of your website. Generating quality content and positions your brand as a leader, improving search engine ranking',
-    icon: ''
-}, {
-    id: 1,
-    head: 'Manage Your software',
-    text: '',
-    icon: ''
+export interface BentoGridType {
+  id: number;
+  image: string;
+  title: string;
+  description: string;
+  size?: 'small' | 'medium' | 'large';
 }
-]
 
+export const BENTO_GRID: BentoGridType[] = [
+  {
+    id: 1,
+    title: 'Monthy Visitors',
+    description:
+      'We specialize in increasing your website daily traffic through tailored strategies such as search engine optimization (SEO), engaging content creation, and targeted social media marketing. By enhancing your online visibility and attracting the right audience, we can help you achieve significant growth in visitor numbers and improve overall engagement with your brand. Feel free to adjust any part of the text to better match your style!',
+    image: '',
+    size: 'small',
+  },
+  {
+    id: 2,
+    title: 'Daily Clients',
+    description:
+      'Effective marketing ensures that your buss=iness acquires multiples customers daily. We increase your visibility in the digital world, using marketing strategies that continually attract and retain new customers',
+    image: '',
+    size: 'small',
+  },
+  {
+    id: 3,
+    title: 'Profit Increase',
+    description:
+      'A well-designed website channels all digital traffic, increasing potential customer visit and turning them into loyal consumers of a product or services provided and displayed on the website',
+    image: '',
+    size: 'small',
+  },
+  {
+    id: 4,
+    title: 'High reputation',
+    description:
+      'A strong digital presence inproves the reputation and authority of your website. Generating quality content and positions your brand as a leader, improving search engine ranking',
+    image: '',
+    size: 'small',
+  },
+  {
+    id: 5,
+    title: 'Manage Your software',
+    description:
+      'When you acquire one of our software solutions, you receive absolute usage rights, allowing you to utilize the software without restrictions. This means you can implement, modify, and integrate the software into your operations as needed, ensuring that it meets your specific requirements. With these rights, you gain full control over the software, empowering your business to maximize its potential and enhance productivity without worrying about licensing limitations',
+    image: '',
+    size: 'medium',
+  },
+];
